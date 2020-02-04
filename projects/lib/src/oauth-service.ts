@@ -1037,6 +1037,8 @@ export class OAuthService extends AuthConfig implements OnDestroy {
                     });
                     break;
                 case 'error':
+                    console.log(e);
+                    console.log(e.data);
                     this.ngZone.run(() => {
                         this.handleSessionError();
                     });
